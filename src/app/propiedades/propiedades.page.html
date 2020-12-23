@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      F&A Reservaciones
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button [routerLink]="['./add' ]" class="button1">
+        <ion-icon name="add-outline"></ion-icon>
+        Añadir
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div id="container">
+    <ion-card *ngFor="let properties of properties">
+      <br>
+      <img src="assets/img/prop.jpeg" height="100" width="100" />
+      <ion-card-content>
+        <ion-card-title>
+          {{ properties.prop_name}} 
+        </ion-card-title>
+        <ion-card-subtitle>
+          {{ properties.prop_ubi}}
+        </ion-card-subtitle>
+      </ion-card-content>
+      <ion-button (click)="viewDetails(properties.id_prop)" class="button1">
+        <ion-icon name="eye-outline"></ion-icon>
+        Detalles
+      </ion-button>
+      
+      <ion-button outline (click)="update(properties.id_prop)" class="button3">
+        <ion-icon name="create-outline"></ion-icon>
+        Editar
+      </ion-button>
+      
+    </ion-card>
+  </div>
+</ion-content>

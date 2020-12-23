@@ -1,0 +1,81 @@
+<!--Update Form-->
+
+<ion-header>
+  <ion-toolbar>
+    <!--Back to all games-->
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/propiedades"></ion-back-button>
+    </ion-buttons>
+    <ion-title align="center">
+      Editar Popi
+    </ion-title>
+
+    <!--Save the updates-->
+    <ion-buttons slot="primary">
+      <ion-button (click)="editPropiedad()" [disabled]="!formPropiedadEdit.valid">
+        <ion-icon name="bookmark-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<!--Edit form-->
+<ion-content>
+  <form [formGroup]="formPropiedadEdit">
+    <ion-grid>
+      <ion-row>
+        <ion-col size-sm="6" offset-sm="3">
+          <ion-item>
+            <ion-label position="floating">Id Propiedad:</ion-label>
+            <ion-input type="number" formControlName="id_prop"> </ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size-sm="6" offset-sm="3">
+          <ion-item>
+            <ion-label position="floating">Equipo prop_name casa:</ion-label>
+            <ion-input type="text" formControlName="prop_name"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size-sm="6" offset-sm="3">
+          <ion-item>
+            <ion-label position="floating">Equipo prop_ubi visita:</ion-label>
+            <ion-input type="text" formControlName="prop_ubi"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size-sm="6" offset-sm="3">
+          <ion-item>
+            <ion-label position="floating">Fecha del prop_people:</ion-label>
+            <ion-input type="text" formControlName="prop_people"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size-sm="6" offset-sm="3">
+          <ion-item>
+            <ion-label position="floating">Marcador prop_type:</ion-label>
+            <ion-input type="text" formControlName="prop_type"> </ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size-sm="6" offset-sm="3">
+          <ion-item>
+            <ion-label position="floating">pets:</ion-label>
+            <ion-input type="text" formControlName="pets"> </ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>

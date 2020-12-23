@@ -11,6 +11,26 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'registro',
+    loadChildren: () => import('./registro/registro.module').then( m => m.RegistroPageModule)
+  },
+  {
+    path: 'arrendatario',
+    loadChildren: () => import('./arrendatario/arrendatario.module').then( m => m.ArrendatarioPageModule)
+  },
+  {
+    path: 'buscar',
+    loadChildren: () => import('./buscar/buscar.module').then( m => m.BuscarPageModule)
+  },
+  {
+    path: 'propiedades',
+    loadChildren: () => import('./propiedades/propiedades.module').then( m => m.PropiedadesPageModule)
+  },
+  {
+    path: 'ubicacion',
+    loadChildren: () => import('./ubicacion/ubicacion.module').then( m => m.UbicacionPageModule)
+  },
 ];
 
 @NgModule({

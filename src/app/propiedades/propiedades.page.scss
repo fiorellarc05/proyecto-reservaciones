@@ -1,0 +1,29 @@
+//properties style
+
+ion-title{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    color: white;
+    font-size: large;
+}
+
+ion-card{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    text-align: center;
+    border-style: dashed;
+    border-color:  #9A031E;
+}
+
+ion-back-button{
+    font-family: 'Courier New', Courier;
+    font-size: small;
+    --color: #80ffdb
+}
+
+.button1{
+    font-family: 'Courier New', Courier;
+    font-size: medium;
+    --background: #0F4C5C;
+    --color: #FB8B24;
+}

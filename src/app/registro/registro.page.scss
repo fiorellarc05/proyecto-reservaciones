@@ -1,0 +1,37 @@
+//Add games page styles
+
+ion-title{
+    color:  #9A031E;
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+ion-back-button{
+    font-family: 'Courier New', Courier, monospace;
+    --color: #FB8B24;
+}
+
+ion-button{
+    --color:  #FB8B24;
+}
+
+ion-item{
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+}
+
+.button1{
+    font-size: large;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    --background: #0F4C5C;
+    --color: white;
+  }
+
+.button2{
+    font-size: large;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    --background: #9A031E;
+    --color: white;
+  }
