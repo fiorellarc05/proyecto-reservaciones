@@ -1,9 +1,33 @@
+<!--Search by filter page-->
+
 <ion-header>
   <ion-toolbar>
-    <ion-title>buscar</ion-title>
+     <!--Back to all properties-->
+     <ion-buttons slot="start">
+      <ion-back-button defaultHref="/propiedades"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Busca propiedades!</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <br>
+  <ion-text>Realiza una búsqueda según tus necesidades mediante filtros</ion-text>
+  <br> <br>
+  <label>Escoje un filtro:</label>
+  <br> <br>
+  <ion-select type="text" interface="popover" placeholder="Busca...">
+    <ion-select-option value="Nombre Propiedad">Nombre</ion-select-option>
+    <ion-select-option value="Ubicación">Ubicación</ion-select-option>
+    <ion-select-option value="Cant. Personas">Cant. Personas</ion-select-option>
+    <ion-select-option  value="Tipo Propiedad">Tipo Propiedad</ion-select-option>
+    <ion-select-option  value="Mascotas">¿Mascotas?</ion-select-option>
+  </ion-select>
+  <!--<ion-select [(ngModel)]="properties" [compareWith]="compareProp" type="text" interface="popover" placeholder="Busca...">
+    <ion-select-option *ngFor="let property of properties" value="Nombre Propiedad">Nombre</ion-select-option>
+    <ion-select-option *ngFor="let property of properties" value="Ubicación">Ubicación</ion-select-option>
+    <ion-select-option *ngFor="let property of properties" value="Cant. Personas">Cant. Personas</ion-select-option>
+    <ion-select-option *ngFor="let property of properties" value="Tipo Propiedad">Tipo Propiedad</ion-select-option>
+    <ion-select-option *ngFor="let property of properties" value="Mascotas">¿Mascotas?</ion-select-option>
+  </ion-select>-->
 </ion-content>

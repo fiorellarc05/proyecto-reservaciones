@@ -12,4 +12,8 @@ export class BuscarPage implements OnInit {
   ngOnInit() {
   }
 
+  /*compareProp(f1: Property, f2: Property, f3:): boolean {
+    return e1 && e2 ? e1.id === e2.id : e1 === e2;
+  }*/
+
 }

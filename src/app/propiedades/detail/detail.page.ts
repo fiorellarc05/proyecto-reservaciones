@@ -30,6 +30,8 @@ export class DetailPage implements OnInit {
       this.id_prop = propiedadId;
     });
   }
+
+  //delete property
   deletePropiedad() {
     this.alertController
       .create({
@@ -54,4 +56,29 @@ export class DetailPage implements OnInit {
       });
   }
 
+  //book a property
+  reservar(){
+    this.alertController
+      .create({
+        header: "Reservar propiedad",
+        message: "¿Está seguro que desea reservar esta propiedad?",
+        buttons: [
+          {
+            text: "Sí",
+            role: "Sí",
+          },
+          {
+            text: "No",
+            role: "No",
+            handler: () => {
+              this.propiedadesService.reservar(this.properties.id_prop);
+              this.router.navigate(["./propiedades"]);
+            },
+          },
+        ],
+      })
+      .then((alertEl) => {
+        alertEl.present();
+      });
+  }
 }

@@ -18,6 +18,12 @@
   </ion-toolbar>
 </ion-header>
 
+<!--Search by filter-->
+<ion-button (click)="buscar()" clear class="button2">
+  <ion-icon name="search-outline"></ion-icon>
+  Buscar
+</ion-button>
+
 <ion-content padding>
   <div id="container">
     <ion-card *ngFor="let properties of properties">
@@ -27,7 +33,7 @@
       <!--Properties preview-->
       <ion-card-content>
         <ion-card-title>
-          {{ properties.prop_name}} 
+          {{ properties.prop_name}}
         </ion-card-title>
         <ion-card-subtitle>
           {{ properties.prop_ubi}}
@@ -35,17 +41,16 @@
       </ion-card-content>
 
       <!--Detail button-->
-      <ion-button (click)="viewDetails(properties.id_prop)" class="button2">
+      <ion-button (click)="viewDetails(properties.id_prop)" class="button3">
         <ion-icon name="eye-outline"></ion-icon>
         Detalles
       </ion-button>
-      
+
       <!--Edit property button-->
-      <ion-button outline (click)="update(properties.id_prop)" class="button3">
+      <ion-button outline (click)="update(properties.id_prop)" class="button4">
         <ion-icon name="create-outline"></ion-icon>
         Editar
       </ion-button>
-      
     </ion-card>
   </div>
 </ion-content>

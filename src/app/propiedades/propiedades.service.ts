@@ -8,14 +8,22 @@ import { properties } from './propiedades.model';
 export class propiedadesService {
   private properties: properties[] = [
 
-    //games array
+    //properties array
     {
       id_prop: 1,
       prop_name: "Casa Bella",
-      prop_ubi: "Playa Hermosa,Puntarenas",
+      prop_ubi: "Playa Hermosa, Puntarenas",
       prop_people: 10,
       prop_type: "Casa",
       pets: "Sí"
+    },
+    {
+      id_prop: 2,
+      prop_name: "Marina Hotel",
+      prop_ubi: "Playa Conchal, Guanacaste",
+      prop_people: 2,
+      prop_type: "Habitación",
+      pets: "No"
     },
   ];
 
@@ -35,7 +43,18 @@ export class propiedadesService {
       )
     };
   }
+
+  //delete properties
   deletePropiedad(propiedadId: number) {
+    this.properties = this.properties.filter(
+      properties => {
+        return properties.id_prop !== propiedadId;
+      }
+    );
+  }
+
+  //book a property
+  reservar(propiedadId: number) {
     this.properties = this.properties.filter(
       properties => {
         return properties.id_prop !== propiedadId;
@@ -83,9 +102,6 @@ export class propiedadesService {
    
     console.log(this.properties);
   }
-  
-  //add events to array
-  
 }
 
 
