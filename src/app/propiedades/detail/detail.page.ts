@@ -30,7 +30,7 @@ export class DetailPage implements OnInit {
       this.id_prop = propiedadId;
     });
   }
-  deletePartido() {
+  deletePropiedad() {
     this.alertController
       .create({
         header: "Borrar Propiedad",

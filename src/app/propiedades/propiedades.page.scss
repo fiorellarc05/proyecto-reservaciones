@@ -18,12 +18,26 @@ ion-card{
 ion-back-button{
     font-family: 'Courier New', Courier;
     font-size: small;
-    --color: #80ffdb
+    --color: #FB8B24;
 }
 
+//add button
 .button1{
-    font-family: 'Courier New', Courier;
+    --color: #9A031E;
+}
+
+//detail button
+.button2{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    --background: #FB8B24;
+    --color: #0F4C5C;
+}
+
+//edit button
+.button3{
+    font-family: 'Courier New', Courier, monospace;
     font-size: medium;
     --background: #0F4C5C;
-    --color: #FB8B24;
+    --color: #E36414;
 }

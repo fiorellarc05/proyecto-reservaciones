@@ -45,7 +45,7 @@ export class AddPage implements OnInit {
         }
       ),
       prop_people: new FormControl(
-        null,
+        1,
         {
           updateOn: 'blur',
           validators: [Validators.required, Validators.min(1)]

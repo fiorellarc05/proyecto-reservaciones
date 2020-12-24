@@ -68,7 +68,7 @@ export class RegistroPage implements OnInit {
 
   //route to properties
   huesped() {
-    this.navCtrl.navigateRoot("/arrendatario");
+    this.navCtrl.navigateRoot("/propiedades");
   }
 
   //route to host options

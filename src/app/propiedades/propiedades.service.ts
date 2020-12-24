@@ -36,17 +36,14 @@ export class propiedadesService {
     };
   }
   deletePropiedad(propiedadId: number) {
-    this.properties = this.filter(
-      partidos => {
-        return partidos.id_part !== propiedadId;
+    this.properties = this.properties.filter(
+      properties => {
+        return properties.id_prop !== propiedadId;
       }
     );
   }
 
-  
-
-
-  //add games to array
+  //add properties to array
   addPropiedad(
     id_prop: number,
     prop_name: string,
@@ -66,7 +63,7 @@ export class propiedadesService {
     this.properties.push(properties);
   }
 
-  //edit game
+  //edit property
   editPropiedad(
     id_prop: number,
     prop_name: string,

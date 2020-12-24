@@ -16,10 +16,6 @@ const routes: Routes = [
     loadChildren: () => import('./registro/registro.module').then( m => m.RegistroPageModule)
   },
   {
-    path: 'arrendatario',
-    loadChildren: () => import('./arrendatario/arrendatario.module').then( m => m.ArrendatarioPageModule)
-  },
-  {
     path: 'buscar',
     loadChildren: () => import('./buscar/buscar.module').then( m => m.BuscarPageModule)
   },

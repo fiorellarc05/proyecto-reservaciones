@@ -3,13 +3,16 @@
     <ion-title>
       F&A Reservaciones
     </ion-title>
+
+    <!--Back to home button-->
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/home"></ion-back-button>
     </ion-buttons>
+
+    <!--Add button-->
     <ion-buttons slot="primary">
-      <ion-button [routerLink]="['./add' ]" class="button1">
+      <ion-button [routerLink]="['./add' ]" clear class="button1">
         <ion-icon name="add-outline"></ion-icon>
-        Añadir
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
@@ -20,6 +23,8 @@
     <ion-card *ngFor="let properties of properties">
       <br>
       <img src="assets/img/prop.jpeg" height="100" width="100" />
+
+      <!--Properties preview-->
       <ion-card-content>
         <ion-card-title>
           {{ properties.prop_name}} 
@@ -28,11 +33,14 @@
           {{ properties.prop_ubi}}
         </ion-card-subtitle>
       </ion-card-content>
-      <ion-button (click)="viewDetails(properties.id_prop)" class="button1">
+
+      <!--Detail button-->
+      <ion-button (click)="viewDetails(properties.id_prop)" class="button2">
         <ion-icon name="eye-outline"></ion-icon>
         Detalles
       </ion-button>
       
+      <!--Edit property button-->
       <ion-button outline (click)="update(properties.id_prop)" class="button3">
         <ion-icon name="create-outline"></ion-icon>
         Editar
