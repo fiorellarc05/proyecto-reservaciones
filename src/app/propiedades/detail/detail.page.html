@@ -45,11 +45,16 @@
     {{properties.pets}}
   </div>
   <br>
+  <div padding> <strong>Fecha disponible</strong>
+    <br>
+    {{properties.date}}
+  </div>
+  <br>
 
   <!--Book button-->
   <ion-button (click)="reservar()" class="button2">
     <ion-icon name="alarm-outline"></ion-icon>
-    ¡Reservar!
+    ¡Reservar {{properties.date}}!
   </ion-button>
   
 </ion-content>

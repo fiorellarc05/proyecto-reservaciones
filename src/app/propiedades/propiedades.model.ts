@@ -5,6 +5,7 @@ export interface properties{
     prop_people: number;
     prop_type: string;
     pets: string;
+    date: string;
 }
 
   

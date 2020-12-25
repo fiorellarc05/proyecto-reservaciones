@@ -15,7 +15,8 @@ export class propiedadesService {
       prop_ubi: "Playa Hermosa, Puntarenas",
       prop_people: 10,
       prop_type: "Casa",
-      pets: "Sí"
+      pets: "No",
+      date: "2 al 3 de enero 2021",
     },
     {
       id_prop: 2,
@@ -23,7 +24,17 @@ export class propiedadesService {
       prop_ubi: "Playa Conchal, Guanacaste",
       prop_people: 2,
       prop_type: "Habitación",
-      pets: "No"
+      pets: "No",
+      date: "4 al 9 de enero 2021",
+    },
+    {
+      id_prop: 3,
+      prop_name: "Hotel Banana Azul",
+      prop_ubi: "Puerto Viejo, Limón",
+      prop_people: 4,
+      prop_type: "Habitación",
+      pets: "Sí",
+      date: "31 de diciembre 2020 al 3 de enero 2021",
     },
   ];
 
@@ -43,6 +54,8 @@ export class propiedadesService {
       )
     };
   }
+
+ 
 
   //delete properties
   deletePropiedad(propiedadId: number) {
@@ -70,6 +83,7 @@ export class propiedadesService {
     prop_people: number,
     prop_type: string,
     pets: string,
+    date: string,
   ) {
     const properties: properties = {
       id_prop: id_prop,
@@ -77,7 +91,8 @@ export class propiedadesService {
       prop_ubi: prop_ubi,
       prop_people: prop_people,
       prop_type: prop_type,
-      pets: pets
+      pets: pets,
+      date: date
     }
     this.properties.push(properties);
   }
@@ -90,6 +105,7 @@ export class propiedadesService {
     prop_people: number,
     prop_type: string,
     pets: string,
+    date: string,
   ) {
     let index = this.properties.map((x) => x.id_prop).indexOf(id_prop);
 
@@ -99,6 +115,7 @@ export class propiedadesService {
     this.properties[index].prop_people = prop_people;
     this.properties[index].prop_type = prop_type;
     this.properties[index].pets = pets;
+    this.properties[index].date = date;
    
     console.log(this.properties);
   }

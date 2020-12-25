@@ -1,9 +1,37 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>ubicacion</ion-title>
+    <!--Back to search-->
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="buscar"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Ubicaciones</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <br>
+  <ion-text>Propiedades por provincia</ion-text>
+  <br> <br>
+
+  <!--Puntarenas properties-->
+  <ion-button (click)="puntarenas()" clear class="button1">
+    <ion-icon name="sunny-outline"></ion-icon>
+    Puntarenas
+  </ion-button>
+  <br> <br>
+
+  <!--Guanacaste Properties-->
+  <ion-button (click)="guanacaste()" clear class="button2">
+    <ion-icon name="sunny-outline"></ion-icon>
+    Guanacaste
+  </ion-button>
+  <br> <br>
+
+  <!--Limón properties-->
+  <ion-button (click)="limon()" clear class="button3">
+    <ion-icon name="sunny-outline"></ion-icon>
+    Limón
+  </ion-button>
+  <br>
 
 </ion-content>

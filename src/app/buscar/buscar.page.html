@@ -2,8 +2,8 @@
 
 <ion-header>
   <ion-toolbar>
-     <!--Back to all properties-->
-     <ion-buttons slot="start">
+    <!--Back to all properties-->
+    <ion-buttons slot="start">
       <ion-back-button defaultHref="/propiedades"></ion-back-button>
     </ion-buttons>
     <ion-title>Busca propiedades!</ion-title>
@@ -16,18 +16,39 @@
   <br> <br>
   <label>Escoje un filtro:</label>
   <br> <br>
-  <ion-select type="text" interface="popover" placeholder="Busca...">
-    <ion-select-option value="Nombre Propiedad">Nombre</ion-select-option>
+  <!--<ion-select type="text" interface="popover" placeholder="Busca...">
+    <ion-select-option value="Nombre Propiedad" >Nombre</ion-select-option>
     <ion-select-option value="Ubicación">Ubicación</ion-select-option>
     <ion-select-option value="Cant. Personas">Cant. Personas</ion-select-option>
     <ion-select-option  value="Tipo Propiedad">Tipo Propiedad</ion-select-option>
     <ion-select-option  value="Mascotas">¿Mascotas?</ion-select-option>
-  </ion-select>
-  <!--<ion-select [(ngModel)]="properties" [compareWith]="compareProp" type="text" interface="popover" placeholder="Busca...">
-    <ion-select-option *ngFor="let property of properties" value="Nombre Propiedad">Nombre</ion-select-option>
-    <ion-select-option *ngFor="let property of properties" value="Ubicación">Ubicación</ion-select-option>
-    <ion-select-option *ngFor="let property of properties" value="Cant. Personas">Cant. Personas</ion-select-option>
-    <ion-select-option *ngFor="let property of properties" value="Tipo Propiedad">Tipo Propiedad</ion-select-option>
-    <ion-select-option *ngFor="let property of properties" value="Mascotas">¿Mascotas?</ion-select-option>
   </ion-select>-->
+
+  <!--Search by location-->
+  <ion-button (click)="place()" clear class="button1">
+    <ion-icon name="location-outline"></ion-icon>
+    Ubicación
+  </ion-button>
+  <br>
+
+  <!--Search if they acept pets-->
+  <ion-button (click)="pets()" clear class="button2">
+    <ion-icon name="paw-outline"></ion-icon>
+    Acepta mascotas
+  </ion-button>
+  <br>
+
+  <!--Search by people quantity-->
+  <ion-button (click)="people()" clear class="button3">
+    <ion-icon name="person-outline"></ion-icon>
+    Cantidad de personas (2 a 4)
+  </ion-button>
+  <br>
+
+  <!--Search by people quantity-->
+  <ion-button (click)="people2()" clear class="button4">
+    <ion-icon name="people-outline"></ion-icon>
+    Cantidad de personas (más de 5)
+  </ion-button>
+  <br>
 </ion-content>

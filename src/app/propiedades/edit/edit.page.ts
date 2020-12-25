@@ -67,7 +67,12 @@ export class EditPage implements OnInit {
             validators: [Validators.required, Validators.minLength(1)],
           }
         ),
-     
+        date: new FormControl(this.properties.pets,
+          {
+            updateOn: "blur",
+            validators: [Validators.required, Validators.minLength(1)],
+          }
+        ),
       });
   
       this.formPropiedadEdit.value.id_prop = this.properties.id_prop;
@@ -85,8 +90,10 @@ export class EditPage implements OnInit {
         this.formPropiedadEdit.value.prop_ubi,
         this.formPropiedadEdit.value.prop_people,
         this.formPropiedadEdit.value.prop_type,
-        this.formPropiedadEdit.value.pets
+        this.formPropiedadEdit.value.pets,
+        this.formPropiedadEdit.value.date
       );
+      
       this.formPropiedadEdit.reset();
       this.router.navigate(['./propiedades']);
     }

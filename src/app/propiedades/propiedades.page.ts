@@ -39,6 +39,10 @@ export class PropiedadesPage implements OnInit {
   //route to search a property by filter
   buscar() {
     this.navCtrl.navigateRoot("/buscar");
+ 
   }
+ 
+
 }
+
 

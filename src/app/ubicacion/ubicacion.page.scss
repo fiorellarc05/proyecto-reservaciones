@@ -1,0 +1,34 @@
+ion-title{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-large;
+    color: #0F4C5C;
+    text-align: center;
+}
+
+ion-back-button{
+    --color:white;
+}
+
+ion-content{
+    font-family: 'Courier New', Courier;
+    font-size: x-large;
+    text-align: center;
+}
+
+.button1{
+    font-size: x-large;
+    --color:white;
+    --background: #9A031E; 
+}
+
+.button2{
+    font-size: x-large;
+    --color: white;
+    --background: #E36414;
+}
+
+.button3{
+    font-size: x-large;
+    --color: white;
+    --background: #FB8B24;
+}

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from "@ionic/angular";
 
 @Component({
   selector: 'app-ubicacion',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UbicacionPage implements OnInit {
 
-  constructor() { }
+  constructor(public navCtrl: NavController) { }
 
   ngOnInit() {
   }
 
+  puntarenas() {
+    this.navCtrl.navigateRoot("/propiedades/detail/1");
+  }
+  guanacaste() {
+    this.navCtrl.navigateRoot("/propiedades/detail/2");
+  }
+  limon() {
+    this.navCtrl.navigateRoot("/propiedades/detail/3");
+  }
 }

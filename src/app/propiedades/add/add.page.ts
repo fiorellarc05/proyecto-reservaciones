@@ -65,7 +65,13 @@ export class AddPage implements OnInit {
           validators: [Validators.required, Validators.min(1)]
         }
       ),
-      
+      date: new FormControl(
+        null,
+        {
+          updateOn: 'blur',
+          validators: [Validators.required, Validators.min(1)]
+        }
+      ),      
     });
   }
   
@@ -80,7 +86,8 @@ export class AddPage implements OnInit {
       this.formPropiedadAdd.value.prop_ubi,
       this.formPropiedadAdd.value.prop_people,
       this.formPropiedadAdd.value.prop_type,
-      this.formPropiedadAdd.value.pets
+      this.formPropiedadAdd.value.pets,
+      this.formPropiedadAdd.value.date
     );
     this.formPropiedadAdd.reset();
     this.router.navigate(['/propiedades']);

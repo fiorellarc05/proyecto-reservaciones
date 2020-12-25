@@ -15,8 +15,22 @@ ion-content{
     text-align: center;
 }
 
-ion-select{
-    font-family: 'Courier New', Courier;
-    font-size: larger;
+.button1{
+    --color: white;
+    --background: #9A031E; 
 }
 
+.button2{
+    --color: white;
+    --background: #E36414;
+}
+
+.button3{
+    --color: white;
+    --background: #FB8B24;
+}
+
+.button4{
+    --color: white;
+    --background: #0F4C5C;
+}

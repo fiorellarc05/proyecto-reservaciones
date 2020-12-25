@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from "@ionic/angular";
+
 
 @Component({
   selector: 'app-buscar',
@@ -7,13 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BuscarPage implements OnInit {
 
-  constructor() { }
+  constructor(public navCtrl: NavController) { }
 
   ngOnInit() {
   }
 
-  /*compareProp(f1: Property, f2: Property, f3:): boolean {
-    return e1 && e2 ? e1.id === e2.id : e1 === e2;
-  }*/
-
+  place() {
+    this.navCtrl.navigateRoot("/ubicacion");
+  }
+  pets() {
+    this.navCtrl.navigateRoot("/propiedades/detail/3");
+  }
+  people() {
+    this.navCtrl.navigateRoot("/propiedades/detail/2");
+  }
+  people2() {
+    this.navCtrl.navigateRoot("/propiedades/detail/1");
+  }
+  
 }

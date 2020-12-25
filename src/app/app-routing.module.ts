@@ -22,11 +22,11 @@ const routes: Routes = [
   {
     path: 'propiedades',
     loadChildren: () => import('./propiedades/propiedades.module').then( m => m.PropiedadesPageModule)
-  },
-  {
+  },  {
     path: 'ubicacion',
     loadChildren: () => import('./ubicacion/ubicacion.module').then( m => m.UbicacionPageModule)
   },
+
 ];
 
 @NgModule({
