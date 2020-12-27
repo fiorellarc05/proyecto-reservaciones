@@ -1,0 +1,53 @@
+<!--Property Detail-->
+
+<ion-header>
+  <ion-toolbar>
+    <!--Back to all properties-->
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/huespedes"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ properties.id_prop}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!--Details-->
+<ion-content padding>
+  <br>
+  <div padding> <strong>Nombre:</strong>
+    <br>
+    {{properties.prop_name}}
+  </div>
+  <br>
+  <div padding><strong>Ubicación:</strong>
+    <br>
+    {{properties.prop_ubi}}
+  </div>
+  <br>
+  <div padding> <strong>Tipo de propiedad:</strong>
+    <br>
+    {{properties.prop_type}}
+  </div>
+  <br>
+  <div padding> <strong>Cantidad de personas:</strong>
+    <br>
+    {{properties.prop_people}}
+  </div>
+  <br>
+  <div padding> <strong>¿Acepta mascotas?</strong>
+    <br>
+    {{properties.pets}}
+  </div>
+  <br>
+  <div padding> <strong>Fecha disponible</strong>
+    <br>
+    {{properties.date}}
+  </div>
+  <br>
+
+  <!--Book button-->
+  <ion-button (click)="reservar()" class="button2">
+    <ion-icon name="alarm-outline"></ion-icon>
+    ¡Reservar {{properties.date}}!
+  </ion-button>
+  
+</ion-content>

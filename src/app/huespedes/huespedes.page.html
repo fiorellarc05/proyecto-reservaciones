@@ -3,29 +3,15 @@
     <ion-title>
       F&A Reservaciones
     </ion-title>
-
     <!--Back to home button-->
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/home"></ion-back-button>
     </ion-buttons>
-
-    <!--Add button-->
-    <ion-buttons slot="primary">
-      <ion-button [routerLink]="['./add' ]" clear class="button1">
-        <ion-icon name="add-outline"></ion-icon>
-      </ion-button>
-    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<!--Go to users view-->
-<ion-button (click)="huesped()" clear class="button5">
-  <ion-icon name="images-outline"></ion-icon>
-  Ver propiedades como huésped
-</ion-button>
-
 <!--Search by filter-->
-<ion-button (click)="buscar()" clear class="button2">
+<ion-button (click)="buscar()" clear class="button1">
   <ion-icon name="search-outline"></ion-icon>
   Buscar
 </ion-button>
@@ -47,16 +33,11 @@
       </ion-card-content>
 
       <!--Detail button-->
-      <ion-button  (click)="viewDetails(properties.id_prop)" class="button3">
+      <ion-button  (click)="viewDetails(properties.id_prop)" class="button2">
         <ion-icon name="eye-outline"></ion-icon>
         Detalles
       </ion-button>
 
-      <!--Edit property button-->
-      <ion-button outline (click)="update(properties.id_prop)" class="button4">
-        <ion-icon name="create-outline"></ion-icon>
-        Editar
-      </ion-button>
     </ion-card>
   </div>
 </ion-content>

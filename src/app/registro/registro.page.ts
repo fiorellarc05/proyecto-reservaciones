@@ -27,13 +27,6 @@ export class RegistroPage implements OnInit {
           validators: [Validators.required, Validators.min(1)]
         }
       ),
-      u_type: new FormControl(
-        null,
-        {
-          updateOn: 'blur',
-          validators: [Validators.required, Validators.minLength(1)]
-        }
-      ),
       u_name: new FormControl(
         null,
         {
@@ -58,7 +51,6 @@ export class RegistroPage implements OnInit {
     }
     this.serviceRegistro.addUser(
       this.formUserAdd.value.id_user,
-      this.formUserAdd.value.u_type,
       this.formUserAdd.value.u_name,
       this.formUserAdd.value.u_password,
     );
@@ -68,7 +60,7 @@ export class RegistroPage implements OnInit {
 
   //route to properties
   huesped() {
-    this.navCtrl.navigateRoot("/propiedades");
+    this.navCtrl.navigateRoot("/huespedes");
   }
 
   //route to host options

@@ -21,37 +21,16 @@ ion-back-button{
     --color: #FB8B24;
 }
 
-//add button
-.button1{
-    --color: #9A031E;
-}
 
 //search button
-.button2{
-    font-family: 'Courier New', Courier, monospace;
-    font-size: large;
+.button1{
     --background: #0F4C5C;
 }
 
 //detail button
-.button3{
+.button2{
     font-family: 'Courier New', Courier, monospace;
     font-size: medium;
     --background: #FB8B24;
     --color: #0F4C5C;
-}
-
-//edit button
-.button4{
-    font-family: 'Courier New', Courier, monospace;
-    font-size: medium;
-    --background: #FB8B24;
-    --color: #0F4C5C;
-}
-
-//users view button
-.button5{
-    font-family: 'Courier New', Courier, monospace;
-    font-size: medium;
-    --background: #9A031E;
 }

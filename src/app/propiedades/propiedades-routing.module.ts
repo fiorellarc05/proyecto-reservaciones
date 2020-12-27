@@ -18,8 +18,7 @@ const routes: Routes = [
   {
     path: 'detail/:propiedadId',
     loadChildren: () => import('./detail/detail.module').then( m => m.DetailPageModule)
-  },
-  
+  },  
 ];
 
 @NgModule({

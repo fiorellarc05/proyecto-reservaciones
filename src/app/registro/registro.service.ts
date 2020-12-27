@@ -10,46 +10,46 @@ export class registroService {
     //users array
     {
       id_user: 1,
-      u_type: "Admin",
+      u_type: 1,
       u_name: "admin",
       u_password: "admin",
     },
     {
       id_user: 2,
-      u_type: "Fio",
+      u_type: 0,
       u_name: "Fio Rodríguez",
       u_password: "123456789",
     },
   ];
 
 
-constructor() { }
+  constructor() { }
 
-    // get all elements to array
-    getAll() {
-      return [...this.users];
-    }
-    //get elements for ID
-    getUser(userId: number) {
-      return {
-        ...this.users.find(
-          users => {
-            return users.id_user === userId;
-          }
-        )
-      };
-    }
+  // get all elements to array
+  getAll() {
+    return [...this.users];
+  }
+
+  //get elements for ID
+  getUser(userId: number) {
+    return {
+      ...this.users.find(
+        users => {
+          return users.id_user === userId;
+        }
+      )
+    };
+  }
 
   //add users to array
   addUser(
     id_user: number,
-    u_type: string,
     u_name: string,
     u_password: string,
   ) {
     const users: users = {
       id_user: id_user,
-      u_type: u_type,
+      u_type: 0,
       u_name: u_name,
       u_password: u_password,
     }

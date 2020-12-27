@@ -5,19 +5,18 @@ import { Router } from "@angular/router";
 import { NavController } from "@ionic/angular";
 
 @Component({
-  selector: 'app-propiedades',
-  templateUrl: './propiedades.page.html',
-  styleUrls: ['./propiedades.page.scss'],
+  selector: 'app-huespedes',
+  templateUrl: './huespedes.page.html',
+  styleUrls: ['./huespedes.page.scss'],
 })
-export class PropiedadesPage implements OnInit {
+export class HuespedesPage implements OnInit {
   properties: properties[];
-  
+
   constructor(
     public navCtrl: NavController,
     private propiedadesServices: propiedadesService,
     private router: Router
-    ) 
-    { }
+  ) { }
 
   ngOnInit() {
     this.properties = this.propiedadesServices.getAll();
@@ -27,27 +26,14 @@ export class PropiedadesPage implements OnInit {
     this.properties = this.propiedadesServices.getAll();
   }
 
-   //update a property
-   update(code: number) {
-    this.router.navigate(["/propiedades/edit/" + code]);
-  }
-
   //property details
   viewDetails(code: number) {
-    this.router.navigate(["/propiedades/detail/" + code]);
+    this.router.navigate(["/huespedes/detail/" + code]);
   }
 
   //route to search a property by filter
   buscar() {
     this.navCtrl.navigateRoot("/buscar");
- 
   }
 
-  //route to users view
-  huesped() {
-    this.navCtrl.navigateRoot("/huespedes");
- 
-  }
 }
-
-
